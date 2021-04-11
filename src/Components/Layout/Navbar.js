@@ -9,8 +9,8 @@ class Navbar extends Component {
       <ReactBootStrap.Navbar
         collapseOnSelect
         expand="md"
-        bg="info"
-        variant="light"
+        className="color-nav"
+        variant="light" 
       >
         <ReactBootStrap.Navbar.Brand href="#home">
           The Informed Voter Project
