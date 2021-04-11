@@ -35,7 +35,7 @@ export default class Landing extends Component {
             </p>
           </Container>
 
-          <CardDeck>
+          <CardDeck fluid="md" style={{ margin: "10%" }}>
             <Card
               bg="dark"
               variant="dark"
@@ -77,9 +77,7 @@ export default class Landing extends Component {
             >
               <Card.Body>
                 <Card.Text>Environment</Card.Text>
-                <Card.Title >
-                  Parks and Rec
-                </Card.Title>
+                <Card.Title>Parks and Rec</Card.Title>
                 <Card.Text>
                   Should King County increase taxes to fund recreational
                   aquatics, and wellness programs?

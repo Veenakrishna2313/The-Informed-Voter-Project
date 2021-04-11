@@ -10,7 +10,11 @@
   width: 100%;
   height: 4.5rem;  
 }
-
+.flex-p{
+  display: flex;
+  justify-content:center;
+  width:"50%";
+}
 .color-nav{
   background-color: lightblue;
 }
