@@ -1,6 +1,17 @@
 .App {
   text-align: center;
 }
+
+.card-img{
+   margin-right: 20px;
+}
+.card-text{
+  justify-content:center;
+  max-width: 100%;
+  
+  
+
+}
 .landing-p{
   background-color:white
 }

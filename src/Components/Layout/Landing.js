@@ -9,7 +9,7 @@ import Container from "react-bootstrap/Container";
 export default class Landing extends Component {
   render() {
     return (
-      <div>
+      <div id="Landing">
         <Jumbotron
           style={{
             backgroundColor: "white",
@@ -34,15 +34,17 @@ export default class Landing extends Component {
               you how local officials could affect your day to day experience.
             </p>
           </Container>
-
+          
           <CardDeck fluid="md" style={{ margin: "10%" }}>
-            <Card
+            
+            <Card 
               bg="dark"
               variant="dark"
               style={{
                 color: "white",
               }}
             >
+              
               <Card.Body>
                 <Card.Text>Law Enforcement</Card.Text>
                 <Card.Title>Policing</Card.Title>

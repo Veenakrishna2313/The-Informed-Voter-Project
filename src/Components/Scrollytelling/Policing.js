@@ -4,7 +4,7 @@ import { css, jsx } from "@emotion/react";
 import { Component } from "react";
 import { Card } from "react-bootstrap";
 import { Scrollama, Step } from "react-scrollama";
-const narration = require("..\\Assets\\Data\\narration.json");
+const narration = require("..\\Scrollytelling\\assets\\Data\\narration.json");
 
 const narrativeStyle = css`
   img {
@@ -49,6 +49,7 @@ const narrativeStyle = css`
     margin-right: 20px;
     text-align: center;
     padding: 10%;
+    border:none;
   }
   .blurb {
     margin: 10%;
@@ -65,8 +66,11 @@ const narrativeStyle = css`
     color: #575757;
   }
   .card-text-s {
+    
     padding: 10%;
     font-size: 24px !important;
+
+    
   }
 `;
 export default class Narrative extends Component {
@@ -92,29 +96,32 @@ export default class Narrative extends Component {
   };
 
   update = (data) => {
-    var src = "..\\Assets\\Images\\" + data + ".png";
+    var src = "./assets/images/" + data + ".png";
     this.setState({ src });
   };
 
   render() {
     const { data } = this.state;
     console.log(data);
-    const src = "..\\Assets\\Images\\" + data + ".png";
+    const src = "./assets/images/" + data + ".png";
     console.log(src);
 
     return (
-      <div>
+      <div id="Policing">
         <div css={narrativeStyle}>
-          <div className="main">
-            <div className="graphic">
+          <div className="main ">
+            <div className="graphic card-img">
               <Card>
                 <Card.Img
                   variant="top"
-                  src={require(`../Assets/Images/${this.state.data}.png`)}
+                  src={
+                    require(`./assets/images/${this.state.data}.png`).default
+                  }
                 />
               </Card>
             </div>
-            <div className="scroller">
+
+            <div className="scroller card-text">
               <Scrollama
                 onStepEnter={this.onStepEnter}
                 onStepExit={this.onStepExit}
@@ -127,7 +134,7 @@ export default class Narrative extends Component {
                     <div className="step">
                       <Card>
                         <Card.Body>
-                          <Card.Text>{narr.description}</Card.Text>
+                          <Card.Title>{narr.description}</Card.Title>
                         </Card.Body>
                       </Card>
                     </div>

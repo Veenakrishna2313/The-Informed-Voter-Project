@@ -8,21 +8,19 @@ import Policing from "./Components/Scrollytelling/Policing";
 
 
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import React from 'react';
 
 
 function App() {
   return (
-    <div className="App">
+    <React.Fragment className="App">
       <Router>
-        <Navbar />
-        
-          <Route exact path="/Landing" component={Landing}></Route>
-          <Landing />
-          <Policing/>
-          <Footer />
-       
+        <Navbar />        
+        <Landing/>     
+        <Policing/>
+        <Footer />
       </Router>
-    </div>
+    </React.Fragment>
   );
 }
 
