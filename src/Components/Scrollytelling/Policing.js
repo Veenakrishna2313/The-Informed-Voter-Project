@@ -6,6 +6,7 @@ import { Card } from "react-bootstrap";
 import { Scrollama, Step } from "react-scrollama";
 const narration = require("..\\Scrollytelling\\assets\\Data\\narration.json");
 
+
 const narrativeStyle = css`
   img {
     max-width: 500px;
@@ -80,6 +81,7 @@ export default class Narrative extends Component {
       data: "1",
       progress: 0,
       src: "",
+      skip:true
     };
   }
 
@@ -99,6 +101,7 @@ export default class Narrative extends Component {
     var src = "./assets/images/" + data + ".png";
     this.setState({ src });
   };
+
 
   render() {
     const { data } = this.state;
@@ -135,7 +138,8 @@ export default class Narrative extends Component {
                       <Card>
                         <Card.Body>
                           <Card.Title>{narr.description}</Card.Title>
-                          <button>Skip</button>
+                          <button onClick={this.props.disappear}>Skip</button>
+                         
                         </Card.Body>
                       </Card>
                     </div>

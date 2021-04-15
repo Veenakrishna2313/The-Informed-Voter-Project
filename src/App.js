@@ -11,39 +11,43 @@ import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import React from 'react';
 
 
-class App extends React.Component  {
-      
- constructor() {
+class App extends React.Component {
+  constructor() {
     super();
-    
+
     this.state = {
       clicked: false,
-      skip:true
+      skip: true,
     };
-    
+
     this.handleClick = this.handleClick.bind(this);
   }
-  
+
   handleClick() {
     this.setState({
-      clicked: true
-      
-      
+      clicked: true,
     });
   }
-render(){
-  return (
-    <div className="App">
-      <Router>
-        <Navbar />
-        <Landing onClicking={this.handleClick} clicked={this.clicked} />
-        {this.state.clicked ? <Policing /> : null}
+  handledisappear() {
+    this.setState({
+      skip: false
+    });
+  }
 
-        <Footer />
-      </Router>
-    </div>
-  );
-}
+  render() {
+    return (
+      <div className="App">
+        <Router>
+          <Navbar />
+          <Landing onClicking={this.handleClick} clicked={this.clicked} />
+          {this.state.clicked ? <Policing /> : null}
+
+          {this.skip ? null : <Policing disappear={this.handledisappear} />}
+          <Footer />
+        </Router>
+      </div>
+    );
+  }
 }
 
 export default App;
