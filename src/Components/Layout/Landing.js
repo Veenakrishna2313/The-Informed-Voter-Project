@@ -5,8 +5,11 @@ import CardDeck from "react-bootstrap/CardDeck";
 import * as ReactBootStrap from "react-bootstrap";
 import Jumbotron from "react-bootstrap/Jumbotron";
 import Container from "react-bootstrap/Container";
+import Policing from "../Scrollytelling/Policing"
 
 export default class Landing extends Component {
+
+  
   render() {
     return (
       <div id="Landing">
@@ -34,26 +37,31 @@ export default class Landing extends Component {
               you how local officials could affect your day to day experience.
             </p>
           </Container>
-          
-          <CardDeck fluid="md" style={{ margin: "10%" }}>
-            
-            <Card 
+        </Jumbotron>
+
+        <CardDeck id="container">
+          <div className= "divstyle"style={{ display: "flex", width: "30%"}}>
+            <Card
               bg="dark"
               variant="dark"
               style={{
                 color: "white",
               }}
             >
-              
               <Card.Body>
                 <Card.Text>Law Enforcement</Card.Text>
-                <Card.Title>Policing</Card.Title>
+                <button className="button-default" onClick={this.props.onClicking}>
+                  <Card.Title>Policing</Card.Title>
+                </button>
+              
                 <Card.Text>
-                  Should police officers in King County receive mandotory
+                  Should police officers in King County receive mandatory
                   de-escalation training?
                 </Card.Text>
               </Card.Body>
             </Card>
+          </div>
+          <div style={{ display: "flex", width: "30%" }}>
             <Card
               bg="primary"
               variant="primary"
@@ -65,11 +73,13 @@ export default class Landing extends Component {
                 <Card.Text>Housing</Card.Text>
                 <Card.Title>Rent Control</Card.Title>
                 <Card.Text>
-                  Should there be a rental cap on all propoerties with Seattle
+                  Should there be a rental cap on all properties with Seattle
                   City Limits?
                 </Card.Text>
               </Card.Body>
             </Card>
+          </div>
+          <div style={{ display: "flex", width: "30%" }}>
             <Card
               bg="success"
               variant="success"
@@ -86,8 +96,8 @@ export default class Landing extends Component {
                 </Card.Text>
               </Card.Body>
             </Card>
-          </CardDeck>
-        </Jumbotron>
+          </div>
+        </CardDeck>
       </div>
     );
   }

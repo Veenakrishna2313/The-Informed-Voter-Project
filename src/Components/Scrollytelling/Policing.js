@@ -135,6 +135,7 @@ export default class Narrative extends Component {
                       <Card>
                         <Card.Body>
                           <Card.Title>{narr.description}</Card.Title>
+                          <button>Skip</button>
                         </Card.Body>
                       </Card>
                     </div>
