@@ -1,15 +1,13 @@
-
-import './App.css';
+import "./App.css";
 import * as ReactBootStrap from "react-bootstrap";
-import Navbar from './Components/Layout/Navbar'
-import Footer from './Components/Layout/Footer'
+import Navbar from "./Components/Layout/Navbar";
+import Footer from "./Components/Layout/Footer";
 import Landing from "./Components/Layout/Landing";
 import Policing from "./Components/Scrollytelling/Policing";
-
+import ThreePointVis from "./Components/ThreePointVis/ThreePointVis";
 
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
-import React from 'react';
-
+import React from "react";
 
 class App extends React.Component {
   constructor() {
@@ -17,34 +15,33 @@ class App extends React.Component {
 
     this.state = {
       clicked: false,
-      skip: true,
+      skip: false,
     };
 
     this.handleClick = this.handleClick.bind(this);
+
+   
   }
 
+ 
   handleClick() {
     this.setState({
-      clicked: true,
+      clicked: !this.state.clicked,
     });
   }
-  handledisappear() {
-    this.setState({
-      skip: false
-    });
-  }
-
+  
   render() {
     return (
       <div className="App">
         <Router>
           <Navbar />
           <Landing onClicking={this.handleClick} clicked={this.clicked} />
-          {this.state.clicked ? <Policing /> : null}
-
-          {this.skip ? null : <Policing disappear={this.handledisappear} />}
+          {this.state.clicked && <Policing onskip={this.handledisappear} />}
+        
           <Footer />
         </Router>
+
+        
       </div>
     );
   }

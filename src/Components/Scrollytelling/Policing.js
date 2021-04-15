@@ -4,7 +4,10 @@ import { css, jsx } from "@emotion/react";
 import { Component } from "react";
 import { Card } from "react-bootstrap";
 import { Scrollama, Step } from "react-scrollama";
+import { Link, animateScroll as scroll } from "react-scroll";
+import Landing from "../Layout/Landing";
 const narration = require("..\\Scrollytelling\\assets\\Data\\narration.json");
+
 
 
 const narrativeStyle = css`
@@ -81,10 +84,14 @@ export default class Narrative extends Component {
       data: "1",
       progress: 0,
       src: "",
-      skip:true
+      skip: true,
     };
-  }
 
+     this.handledisappear = this.handledisappear.bind(this);
+  }
+  scrollToTop = () => {
+    scroll.scrollToTop();
+  };
   onStepEnter = ({ element, data }) => {
     this.setState({ data });
     console.log(data);
@@ -101,16 +108,19 @@ export default class Narrative extends Component {
     var src = "./assets/images/" + data + ".png";
     this.setState({ src });
   };
-
+  handledisappear() {
+    console.log("i was clicked");
+    
+    this.setState({
+      skip: !this.state.skip,
+    });
+  }
 
   render() {
     const { data } = this.state;
-    console.log(data);
-    const src = "./assets/images/" + data + ".png";
-    console.log(src);
 
     return (
-      <div id="Policing">
+      <div className="image-text" id="Policing">
         <div css={narrativeStyle}>
           <div className="main ">
             <div className="graphic card-img">
@@ -138,8 +148,15 @@ export default class Narrative extends Component {
                       <Card>
                         <Card.Body>
                           <Card.Title>{narr.description}</Card.Title>
-                          <button onClick={this.props.disappear}>Skip</button>
-                         
+                          
+                              <button
+                                className="button-default"
+                                onClick={this.handledisappear}
+                                type="button"
+                              >
+                                Skip
+                              </button>
+                          
                         </Card.Body>
                       </Card>
                     </div>
