@@ -34,14 +34,20 @@ class App extends React.Component {
     return (
       <div className="App">
         <Router>
-          <Navbar />
-          <Landing onClicking={this.handleClick} clicked={this.clicked} />
-          {this.state.clicked && <Policing onskip={this.handledisappear} />}
-        
-          <Footer />
-        </Router>
 
         
+          <Navbar />
+          <Route exact path="">
+            <Landing onClicking={this.handleClick} clicked={this.clicked} />
+            {this.state.clicked && <Policing onskip={this.handledisappear} />}
+          </Route>
+
+          <Route exact path="/Policing">
+            <Policing />
+          </Route>
+            
+        </Router>
+        <Footer />
       </div>
     );
   }

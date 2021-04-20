@@ -6,6 +6,7 @@ import * as ReactBootStrap from "react-bootstrap";
 import Jumbotron from "react-bootstrap/Jumbotron";
 import Container from "react-bootstrap/Container";
 import Policing from "../Scrollytelling/Policing"
+import { Link } from 'react-scroll';
 
 export default class Landing extends Component {
 
@@ -73,7 +74,11 @@ export default class Landing extends Component {
               >
                 <Card.Body>
                   <Card.Text>Housing</Card.Text>
-                  <Card.Title>Rent Control</Card.Title>
+                  <Link to="/Policing">
+                    <button to="/Policing" className="button-default">
+                      <Card.Title>Rent Control</Card.Title>
+                    </button>
+                  </Link>
                   <Card.Text>
                     Should there be a rental cap on all properties with Seattle
                     City Limits?

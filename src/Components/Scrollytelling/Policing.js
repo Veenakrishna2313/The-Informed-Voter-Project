@@ -148,15 +148,14 @@ export default class Narrative extends Component {
                       <Card>
                         <Card.Body>
                           <Card.Title>{narr.description}</Card.Title>
-                          
-                              <button
-                                className="button-default"
-                                onClick={this.handledisappear}
-                                type="button"
-                              >
-                                Skip
-                              </button>
-                          
+
+                          <button
+                            className="button-default"
+                            onClick={this.scrollToTop}
+                            type="button"
+                          >
+                            Skip
+                          </button>
                         </Card.Body>
                       </Card>
                     </div>
