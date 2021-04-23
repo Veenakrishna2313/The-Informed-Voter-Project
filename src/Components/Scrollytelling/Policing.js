@@ -5,26 +5,30 @@ import { Component } from "react";
 import { Card } from "react-bootstrap";
 import { Scrollama, Step } from "react-scrollama";
 import { Link, animateScroll as scroll } from "react-scroll";
-import Landing from "../Layout/Landing";
+
 const narration = require("..\\Scrollytelling\\assets\\Data\\narration.json");
 
 
 
 const narrativeStyle = css`
-  img {
+  .transparent {
+    background: rgba(0, 151, 19, 0);
+  }
+  .img {
     max-width: 500px;
   }
+
   .main {
     padding: 10vh 2vw;
-    display: flex;
     justify-content: space-between;
   }
+
   .graphic {
-    flex-basis: 50%;
+    flex-basis: 10%;
     position: sticky;
     top: 15vh;
-    width: 100%;
-    height: 75vh;
+    width: 90%;
+    height: 50vh;
     align-self: flex-center;
   }
   .data {
@@ -52,8 +56,8 @@ const narrativeStyle = css`
     margin-left: 20px;
     margin-right: 20px;
     text-align: center;
-    padding: 10%;
-    border:none;
+    padding: 20%;
+    border: none;
   }
   .blurb {
     margin: 10%;
@@ -70,11 +74,8 @@ const narrativeStyle = css`
     color: #575757;
   }
   .card-text-s {
-    
     padding: 10%;
     font-size: 24px !important;
-
-    
   }
 `;
 export default class Narrative extends Component {
@@ -144,10 +145,12 @@ export default class Narrative extends Component {
               >
                 {narration.map((narr) => (
                   <Step data={narr.key} key={narr.key}>
-                    <div className="step">
-                      <Card>
+                    <div className="step ">
+                      <Card className="transparent">
                         <Card.Body>
-                          <Card.Title>{narr.description}</Card.Title>
+                          <Card.Title >
+                            {narr.description}
+                          </Card.Title>
 
                           <button
                             className="button-default"
