@@ -8,6 +8,7 @@ import img4 from "../Scrollytelling/assets/Avatars/4.png";
 import img5 from "../Scrollytelling/assets/Avatars/5.png";
 import img6 from "../Scrollytelling/assets/Avatars/6.png";
 
+
 import VisibilitySensor from "react-visibility-sensor";
 
 const Reactspring = () => {
@@ -16,6 +17,12 @@ const Reactspring = () => {
     
   });
 
-  return 
+  return (
+<div>
+<img src="img1"/>
+</div>
+
+  )
+};
 
 export default Reactspring;
