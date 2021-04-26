@@ -18,11 +18,10 @@ const Reactspring = () => {
   });
 
   return (
-<div>
-<img src="img1"/>
-</div>
-
-  )
+    <div>
+      <img src={img1} />
+    </div>
+  );
 };
 
 export default Reactspring;
