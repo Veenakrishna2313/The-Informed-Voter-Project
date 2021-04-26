@@ -1,14 +1,16 @@
 import "./App.css";
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import React from "react";
 import * as ReactBootStrap from "react-bootstrap";
 import Navbar from "./Components/Layout/Navbar";
 import Footer from "./Components/Layout/Footer";
 import Landing from "./Components/Layout/Landing";
 import Policing from "./Components/Scrollytelling/Policing";
+import Reactspring from "./Components/Layout/Reactspring";
 
-import Applemobile from "./Components/Layout/applemobile";
+import Newanimation from "./Components/Layout/Newanimation";
 
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
-import React from "react";
+
 
 class App extends React.Component {
   constructor() {
@@ -32,8 +34,8 @@ class App extends React.Component {
     return (
       <div className="App">
         <Router>
-          <Applemobile />
           <Navbar />
+
           <Route exact path="">
             <Landing onClicking={this.handleClick} clicked={this.clicked} />
             {this.state.clicked && <Policing onskip={this.handledisappear} />}
@@ -43,8 +45,9 @@ class App extends React.Component {
             <Policing />
           </Route>
         </Router>
-
+        <Reactspring />
         <Footer />
+    
       </div>
     );
   }

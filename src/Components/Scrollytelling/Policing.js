@@ -20,14 +20,16 @@ const narrativeStyle = css`
 
   .main {
     padding: 10vh 2vw;
+    display: flex;
     justify-content: space-between;
+    
   }
 
   .graphic {
-    flex-basis: 10%;
+    flex-basis: 50%;
     position: sticky;
     top: 15vh;
-    width: 90%;
+    width: 50%;
     height: 50vh;
     align-self: flex-center;
   }
