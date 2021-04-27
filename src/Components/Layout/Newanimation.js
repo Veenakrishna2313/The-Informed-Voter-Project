@@ -27,14 +27,13 @@ const Newanimation = () => {
   return (
     <ScrollContainer>
       <ScrollPage page={0}>
-        <Animator animation={batch(Fade(), Sticky(), MoveOut(0, -100))}>
-          <img style={{ fontSize: ".5em" }} src={imag1} />
-          <h1>Hello from the other s</h1>
+        <Animator style={{ position:"sticky"}} animation={MoveOut(-2000, -100)}>
+          <img src={imag1} />
         </Animator>
       </ScrollPage>
       <ScrollPage page={1}>
         <Animator animation={ZoomInScrollOut}>
-          <img style={{ fontSize: "3em" }} src={imag2} />
+          <h1>Hello from the other s</h1>
         </Animator>
       </ScrollPage>
       <ScrollPage page={2}>
@@ -45,11 +44,11 @@ const Newanimation = () => {
       <ScrollPage page={3}>
         <div>
           <span style={{ fontSize: "3em" }}>
-            <Animator animation={MoveIn(-500, 0)}>
+            <Animator>
               <img style={{ fontSize: "3em" }} src={imag4} />
             </Animator>
-            <Animator animation={MoveIn(500, 0)}>Nice to meet you 🙋🏻‍♀️</Animator>
-            - I'm Seonghyeok -
+            <Animator animation={MoveIn(500, 0)}>Nice to meet you 🙋🏻‍♀️</Animator>-
+            I'm Seonghyeok -
             <Animator animation={MoveOut(500, 0)}>
               <img style={{ fontSize: "3em" }} src={imag6} />
             </Animator>

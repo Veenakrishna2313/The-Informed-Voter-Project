@@ -7,10 +7,9 @@ import Footer from "./Components/Layout/Footer";
 import Landing from "./Components/Layout/Landing";
 import Policing from "./Components/Scrollytelling/Policing";
 import Reactspring from "./Components/Layout/Reactspring";
+import Scrolltrigger from "./Components/Layout/ScrolltriggerGSAP";
 
 import Newanimation from "./Components/Layout/Newanimation";
-
-
 
 class App extends React.Component {
   constructor() {
@@ -33,7 +32,7 @@ class App extends React.Component {
   render() {
     return (
       <div className="App">
-        <Router>
+        {/*  <Router>
           <Navbar />
 
           <Route exact path="">
@@ -46,8 +45,8 @@ class App extends React.Component {
           </Route>
         </Router>
         <Reactspring />
-        <Footer />
-    
+        <Footer />*/}
+        <Scrolltrigger/>
       </div>
     );
   }

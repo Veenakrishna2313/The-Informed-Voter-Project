@@ -1,3 +1,6 @@
+* {
+  box-sizing: border-box;
+}
 .App {
   text-align: center;
 }
@@ -140,3 +143,36 @@ canvas {
     line-height: 1.5;
   }
 
+
+  #img1  { 
+  
+  height: 200px;
+  width: 200px;
+   margin: 10% 
+    
+  }
+
+ 
+ #img2  { 
+  
+ 
+  height: 200px;
+  width: 200px;
+   margin: 10% 
+    
+  }
+
+   #img3  { 
+  
+  height: 200px;
+  width: 200px;
+  margin-bottom: 10%
+  }
+ #img4  { 
+  
+  height: 200px;
+  width: 200px;
+  margin-bottom: 10%
+  }
+
+  

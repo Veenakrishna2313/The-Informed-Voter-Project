@@ -22,7 +22,7 @@ class Navbar extends Component {
         <ReactBootStrap.Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <ReactBootStrap.Navbar.Collapse id="responsive-navbar-nav">
           <ReactBootStrap.Nav class="navbar-nav ml-auto">
-            <ReactBootStrap.Nav.Link spy={true} smooth={true} href="#Landing">
+            <ReactBootStrap.Nav.Link spy smooth href="#Landing">
               Home
             </ReactBootStrap.Nav.Link>
 
