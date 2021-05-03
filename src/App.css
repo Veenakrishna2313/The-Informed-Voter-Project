@@ -144,7 +144,7 @@ canvas {
   }
 
 
-  #img1  { 
+  #img1, #img2, #img3, #img4, #img5, #img6, #img7  { 
   
   height: 200px;
   width: 200px;
@@ -153,26 +153,8 @@ canvas {
   }
 
  
- #img2  { 
-  
- 
-  height: 200px;
-  width: 200px;
-   margin: 10% 
-    
-  }
 
-   #img3  { 
-  
-  height: 200px;
-  width: 200px;
-  margin-bottom: 10%
-  }
- #img4  { 
-  
-  height: 200px;
-  width: 200px;
-  margin-bottom: 10%
-  }
+
+
 
   
